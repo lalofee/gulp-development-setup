@@ -1,2 +1,3 @@
 # gulp development setup
- basic gulp setup with gulp-sass and browserSync
+ basic setup with gulp-sass and browserSync
+ works with gulp4
