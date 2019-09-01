@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-// const rename = require('gulp-rename');
 
 // compile scss into css
 function style() {
@@ -15,15 +14,7 @@ function style() {
     .pipe(browserSync.stream());
 }
 
-// function rename() {
-//     return gulp.src('./css/main.css')
-//     .pipe(rename(function (path)
-//     {
-//         path.basename += 'styles.min';
-//         path.extname = '.css';
-//     }))
-//     .pipe(gulp.dest('./css'));
-// }
+
 
 function watch() {
     browserSync.init({
@@ -32,7 +23,6 @@ function watch() {
         }
     });
     gulp.watch('./scss/**/*.scss', style);
-    // gulp.watch('./css/main.css').on('change', browserSync.reload);
     gulp.watch('./*.html').on('change', browserSync.reload);
     gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 }
